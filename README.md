@@ -1,87 +1,37 @@
-⚠️ **As of 2020, MORSE is not maintained/updated anymore. The code will remain available for the foreseeable future for adventurous researchers and/or archeologists, but do not expect much support!** ⚠️
-
-⚠️ Also, MORSE requires Blender to run. **The last supported version of Blender is 2.79b. MORSE can _not_ run with more recent versions!** ⚠️
-
-![MORSE logo](doc/media/morse-logo.png)
-
-MORSE: the Modular Open Robots Simulator Engine
-===============================================
-
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.45965.svg)](http://dx.doi.org/10.5281/zenodo.45965) [![Build Status](https://travis-ci.org/morse-simulator/morse.png?branch=master)](https://travis-ci.org/morse-simulator/morse) [![Build status](https://ci.appveyor.com/api/projects/status/github/morse-simulator/morse?branch=master)](https://ci.appveyor.com/api/projects/status/github/morse-simulator/morse)
-
-
-![MORSE screenshot 1](doc/media/morse_ros_navigation.png)
-
-[MORSE](http://morse-simulator.github.io/) (Modular OpenRobots Simulation Engine) is
-an academic robotic simulator, based on the Blender Game Engine and the Bullet
-Physics engine.  It is a BSD-licensed project (cf [LICENSE](LICENSE)).
-
-It is meant to be versatile (simulation of field robotics, indoor
-robotics, human robot interaction, multi-robots systems) and allow
-simulation at different levels (from raw cameras to high-level
-semantics).
-
-The communication with the simulator is middleware independent. At the
-moment, MORSE supports the [following
-middlewares](http://www.openrobots.org/morse/doc/latest/user/integration.html):
-
-- ROS
-- Yarp
-- pocolibs
-- MOOS
-- HLA
-- mavlink
-- and a generic socket interface (with an intuitive Python API)
-
-Installation
-------------
-
-Please read INSTALL or check the [on-line installation
-instructions](http://www.openrobots.org/morse/doc/latest/user/installation.html).
-
-Documentation
--------------
-
-The MORSE documentation is available from the doc/ directory.  It is
-available as well online, on the [MORSE
-website](http://www.openrobots.org/morse/doc).
-
-You can also [subscribe to
-morse-users@laas.fr](https://sympa.laas.fr/sympa/subscribe/morse-users).
-
-How to contribute
------------------
-
-Even if the code-base is not stabilized yet, contribution to MORSE are
-more than welcome.
-
-You can contribute new robot models, new sensors, we have a TODO list
-for the Blender game engine itself...
-
-Feel free to [subscribe to
-morse-dev@laas.fr](https://sympa.laas.fr/sympa/subscribe/morse-dev) and ask!
-
-Code is available on [GitHub](https://github.com/morse-simulator/morse).
-
-Feel free to fork, pull request or submit issues to improve the project!
-
-Credits
--------
-
-Copyright (c) 2009-2010 ONERA
-Copyright (c) 2009-2016 LAAS-CNRS
-Copyright (c) 2015-2016 ISAE-SUPAERO
-Copyright held by the MORSE authors or the institutions employing them, refer
-to the AUTHORS file for the list. The list of the contributors to each file
-can be obtained from the commit history ('git log <file>').
-
-MORSE is developped by a large community of academics, with contributions from
-more that 15 universities world-wide.
-
-![MORSE contributors](doc/media/contributors.png)
-
-The initial development of MORSE has been partially funded by the Fondation RTRA
-within the ROSACE project framework, and by DGA <http://www.defense.gouv.fr/dga>
-through the ACTION <http://action.onera.fr> project.
-
-![MORSE screenshot 2](doc/media/treasure.jpg)
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"> 
+<p dir="auto"><g-emoji class="g-emoji" alias="warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⚠️</font></font></g-emoji><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此外，MORSE 需要 Blender 才能运行。</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最后支持的 Blender 版本是 2.79b。 MORSE</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">无法</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行较新的版本！</font></font></strong> <g-emoji class="g-emoji" alias="warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⚠️</font></font></g-emoji></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/morse-simulator/morse/blob/master/doc/media/morse-logo.png"><img src="https://github.com/morse-simulator/morse/raw/master/doc/media/morse-logo.png" alt="莫尔斯标志" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE：模块化开放机器人模拟器引擎</font></font></h1><a id="user-content-morse-the-modular-open-robots-simulator-engine" class="anchor" aria-label="永久链接：MORSE：模块化开放机器人模拟器引擎" href="#morse-the-modular-open-robots-simulator-engine"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="http://dx.doi.org/10.5281/zenodo.45965" rel="nofollow"><img src="https://camo.githubusercontent.com/242726fca45136735af4a2096affb16747a0aa770dc0d4cd544701454636513e/68747470733a2f2f7a656e6f646f2e6f72672f62616467652f646f692f31302e353238312f7a656e6f646f2e34353936352e737667" alt="DOI" data-canonical-src="https://zenodo.org/badge/doi/10.5281/zenodo.45965.svg" style="max-width: 100%;"></a> <a href="https://travis-ci.org/morse-simulator/morse" rel="nofollow"><img src="https://camo.githubusercontent.com/bd61791fc889fbb9778154ca9a104e9c7fd322426d66e43b7306ef7afdade5e8/68747470733a2f2f7472617669732d63692e6f72672f6d6f7273652d73696d756c61746f722f6d6f7273652e706e673f6272616e63683d6d6173746572" alt="构建状态" data-canonical-src="https://travis-ci.org/morse-simulator/morse.png?branch=master" style="max-width: 100%;"></a> <a href="https://ci.appveyor.com/api/projects/status/github/morse-simulator/morse" rel="nofollow"><img src="https://camo.githubusercontent.com/ab264bbb1199563227e8d26ec2d05b117b5c4b4fd111e4d7a24da582d6adf58e/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f6769746875622f6d6f7273652d73696d756c61746f722f6d6f7273653f6272616e63683d6d6173746572" alt="构建状态" data-canonical-src="https://ci.appveyor.com/api/projects/status/github/morse-simulator/morse?branch=master" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/morse-simulator/morse/blob/master/doc/media/morse_ros_navigation.png"><img src="https://github.com/morse-simulator/morse/raw/master/doc/media/morse_ros_navigation.png" alt="莫尔斯屏幕截图1" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="http://morse-simulator.github.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（模块化 OpenRobots 模拟引擎）是一款学术机器人模拟器，基于 Blender 游戏引擎和 Bullet 物理引擎。它是一个 BSD 许可的项目（参见</font></font><a href="/morse-simulator/morse/blob/master/LICENSE"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LICENSE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它具有多功能性（现场机器人、室内机器人、人类机器人交互、多机器人系统的模拟），并允许在不同级别（从原始相机到高级语义）进行模拟。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与模拟器的通信是独立于中间件的。目前，MORSE 支持</font></font><a href="http://www.openrobots.org/morse/doc/latest/user/integration.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下中间件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">活性氧</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">亚普</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">波科库</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">莫斯</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">人类白细胞抗原</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马夫链接</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和通用套接字接口（具有直观的 Python API）</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请阅读安装或查看</font></font><a href="http://www.openrobots.org/morse/doc/latest/user/installation.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在线安装说明</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2><a id="user-content-documentation" class="anchor" aria-label="永久链接：文档" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE 文档可从 doc/ 目录获取。也可在</font></font><a href="http://www.openrobots.org/morse/doc" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE 网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上在线获取。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您还可以</font></font><a href="https://sympa.laas.fr/sympa/subscribe/morse-users" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅 morse-users@laas.fr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如何贡献</font></font></h2><a id="user-content-how-to-contribute" class="anchor" aria-label="永久链接：如何贡献" href="#how-to-contribute"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">即使代码库尚未稳定，对 MORSE 的贡献也非常受欢迎。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以贡献新的机器人模型、新的传感器，我们有 Blender 游戏引擎本身的 TODO 列表......</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请随时</font></font><a href="https://sympa.laas.fr/sympa/subscribe/morse-dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">订阅 morse-dev@laas.fr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">并提问！</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码可在</font></font><a href="https://github.com/morse-simulator/morse"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上获取。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请随意 fork、pull request 或提交问题来改进项目！</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">制作人员</font></font></h2><a id="user-content-credits" class="anchor" aria-label="永久链接：学分" href="#credits"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版权所有 (c) 2009-2010 ONERA 版权所有 (c) 2009-2016 LAAS-CNRS 版权所有 (c) 2015-2016 ISAE-SUPAERO 版权由 MORSE 作者或雇用他们的机构持有，请参阅作者文件中的列表。每个文件的贡献者列表可以从提交历史记录（“git log”）中获取。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE 由大型学术团体开发，并得到全球超过 15 所大学的贡献。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/morse-simulator/morse/blob/master/doc/media/contributors.png"><img src="/morse-simulator/morse/raw/master/doc/media/contributors.png" alt="莫尔斯电码贡献者" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MORSE 的初始开发部分由 ROSACE 项目框架内的 RTRA 基金会以及 DGA </font></font><a href="http://www.defense.gouv.fr/dga" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://www.defense.gouv.fr/dga</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+通过 ACTION </font></font><a href="http://action.onera.fr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://action.onera.fr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目资助。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/morse-simulator/morse/blob/master/doc/media/treasure.jpg"><img src="/morse-simulator/morse/raw/master/doc/media/treasure.jpg" alt="莫尔斯屏幕截图2" style="max-width: 100%;"></a></p>
+</article></div>
